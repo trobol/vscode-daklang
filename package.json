@@ -1,0 +1,24 @@
+{
+    "name":"daklang",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": ">=0.9.0"
+    },
+    "publisher": "me",
+    "contributes": {
+        "languages": [
+            {"id": "daklang",
+            "aliases": [],
+            "extensions": [
+                ".dak"
+            ]}
+        ],
+        "grammars": [
+            {
+                "language": "daklang",
+                "scopeName": "source.daklang",
+                "path": "./syntaxes/daklang.json"
+            }
+        ]
+    }
+}

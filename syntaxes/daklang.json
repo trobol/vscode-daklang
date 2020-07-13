@@ -5,10 +5,10 @@
     ],
     "patterns": [
         {
-            "include":"#comment"
+            "include": "#comment"
         },
         {
-            "include":"#constant"
+            "include": "#constant"
         },
         {
             "include": "#entity"
@@ -22,26 +22,22 @@
     ],
     "repository": {
         "comment": {
+            "begin": "/\\*",
+            "end": "\\*/",
+            "name": "comment.block.dak",
             "patterns": [
                 {
-                    "begin": "/\\*",
-                    "end": "\\*/",
-                    "captures": {
-                        "0": {
-                            "name": "punctuation.definition.comment.dak"
-                        }
-                    },
-                    "name": "comment.block.dak"
+                    "include": "#comment"
                 },
                 {
                     "begin": "//",
                     "beginCaptures": {
                         "0": {
-                            "name":"punctuation.definition.comment.dak"
+                            "name": "punctuation.definition.comment.dak"
                         }
                     },
-                    "end":"$",
-                    "name":"comment.line.double-slash.dak"
+                    "end": "$",
+                    "name": "comment.line.double-slash.dak"
                 }
             ]
         },
@@ -49,7 +45,7 @@
             "patterns": [
                 {
                     "match": "\\b(true|false|uninit|null)\\b",
-                    "name":"constant.language.dak"
+                    "name": "constant.language.dak"
                 }
             ]
         },
@@ -57,10 +53,10 @@
             "patterns": [
                 {
                     "comment": "Function declarations",
-                    "match": "^(\\bfunction\\b)(?:\\s+(\\([^\\)]+\\)\\s+)?(\\w+)(?=\\s*\\())?",
+                    "match": "^(\\bfunc\\b)(?:\\s+(\\([^\\)]+\\)\\s+)?(\\w+)(?=\\s*\\())?",
                     "captures": {
                         "1": {
-                            "name": "keyword.function.dak"
+                            "name": "keyword.func.dak"
                         },
                         "2": {
                             "patterns": []

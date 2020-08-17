@@ -8,6 +8,9 @@
             "include": "#comment"
         },
         {
+            "include":"#multi-comment"
+        },
+        {
             "include": "#constant"
         },
         {
@@ -21,25 +24,25 @@
         }
     ],
     "repository": {
-        "comment": {
+        "multi-comment": {
             "begin": "/\\*",
             "end": "\\*/",
             "name": "comment.block.dak",
             "patterns": [
                 {
-                    "include": "#comment"
-                },
-                {
-                    "begin": "//",
-                    "beginCaptures": {
-                        "0": {
-                            "name": "punctuation.definition.comment.dak"
-                        }
-                    },
-                    "end": "$",
-                    "name": "comment.line.double-slash.dak"
+                    "include": "#multi-comment"
                 }
             ]
+        },
+        "comment": {
+            "begin": "//",
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.definition.comment.dak"
+                }
+            },
+            "end": "$",
+            "name": "comment.line.double-slash.dak"
         },
         "constant": {
             "patterns": [
